@@ -5,6 +5,17 @@ date: "Sunday, January 10, 2016"
 output: html_document
 ---
 
+```r
+knitr::opts_chunk$set(fig.width=12, fig.path='Figs/',
+                      echo=TRUE, warning=FALSE, message=FALSE)
+```
+
+```r
+library(knitr)
+library(markdown)
+```
+
+
 Introduction
 ============
 
@@ -72,7 +83,7 @@ with(stepsPerDay, {
 })
 ```
 
-![plot of chunk histogram](figure/histogram-1.png) 
+![plot of chunk unnamed-chunk-4](Figs/unnamed-chunk-4-1.png) 
 
        3. Calculate and report the mean and median of the total number of steps taken per day.
 
@@ -112,7 +123,7 @@ with(meanStepsPerInt, {plot(x= Interval, y= AveStepsAcrossDates, type= "l",
 )})
 ```
 
-![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4-1.png) 
+![plot of chunk unnamed-chunk-6](Figs/unnamed-chunk-6-1.png) 
 
        2. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number 
           of steps?
@@ -194,7 +205,7 @@ with(stepsPerDayImp, {
 })
 ```
 
-![plot of chunk unnamed-chunk-9](figure/unnamed-chunk-9-1.png) 
+![plot of chunk unnamed-chunk-11](Figs/unnamed-chunk-11-1.png) 
 
 The mean and median steps per day after imputing the data are as follows:
 
@@ -269,7 +280,7 @@ xyplot( type="l", col= "blue", data= meanStepsPerIntDayType, steps ~ interval | 
         ylab= "Number of steps", layout=c(1,2))
 ```
 
-![plot of chunk unnamed-chunk-13](figure/unnamed-chunk-13-1.png) 
+![plot of chunk unnamed-chunk-15](Figs/unnamed-chunk-15-1.png) 
 
 
 
