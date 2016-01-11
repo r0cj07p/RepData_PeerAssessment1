@@ -4,15 +4,6 @@ author: "Dave Moody"
 date: "Sunday, January 10, 2016"
 output: html_document
 ---
-```{r global_options, include=TRUE}
-knitr::opts_chunk$set(fig.width=12, fig.path='Figs/',
-                      echo=TRUE, warning=FALSE, message=FALSE)
-```
-```{r}
-library(knitr)
-library(markdown)
-```
-
 
 Introduction
 ============
