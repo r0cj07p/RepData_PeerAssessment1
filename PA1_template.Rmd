@@ -2,7 +2,10 @@
 title: 'Reproducible Research:  Peer Assessment 1 Project'
 author: "Dave Moody"
 date: "Sunday, January 10, 2016"
-output: html_document
+output:
+  html_document:
+    fig_width: 12
+    keep_md: yes
 ---
 
 Introduction
@@ -59,7 +62,7 @@ stepsPerDay$Steps <- as.numeric(stepsPerDay$Steps)
 
        2. Make a histogram of the total number of steps taken each day.
 
-```{r}
+```{r histogram1}
 with(stepsPerDay, {
         par(mar=c(6.75,6.75,3,0), mgp=c(5.75,0.75,0), las=2, oma=c(0,0,0,0))
         barplot(height=Steps, col= "red", main="Number of Steps Taken Each Day",
@@ -84,7 +87,7 @@ medianStepsPerDay
        1. Make a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and the average number of 
           steps taken, averaged across all days (y-axis).
 
-```{r}
+```{r simpleplot1}
 meanStepsPerInt <- aggregate(data= origData, steps~interval, mean, na.action=na.omit)
 colnames(meanStepsPerInt) <- c("Interval", "AveStepsAcrossDates")
 par(mar= c(5,4,4,2), mgp= c(3,1,0))
@@ -139,7 +142,7 @@ head(NAimp)
           part of the assignment? What is the impact of imputing missing data on the estimates of the total 
           daily number of steps?
 
-```{r}
+```{r histogram2}
 stepsPerDayImp <- aggregate(NAimp$steps, list(NAimp$date), sum)
 colnames(stepsPerDayImp) <- c("Date","Steps")
 with(stepsPerDayImp, {
@@ -193,7 +196,7 @@ head(NAimpWithDayType)
           the README file in the GitHub repository to see an example of what this plot should look like using 
           simulated data.  
 
-```{r}
+```{r simpleplot2}
 meanStepsPerIntDayType <- aggregate(data= NAimpWithDayType, steps ~ TypeOfDay + interval, mean)
 library("lattice")
 xyplot( type="l", col= "blue", data= meanStepsPerIntDayType, steps ~ interval | TypeOfDay, xlab= "Interval",

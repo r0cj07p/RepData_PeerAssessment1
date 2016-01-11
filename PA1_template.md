@@ -1,9 +1,6 @@
----
-title: 'Reproducible Research:  Peer Assessment 1 Project'
-author: "Dave Moody"
-date: "Sunday, January 10, 2016"
-output: html_document
----
+# Reproducible Research:  Peer Assessment 1 Project
+Dave Moody  
+Sunday, January 10, 2016  
 
 Introduction
 ============
@@ -72,7 +69,7 @@ with(stepsPerDay, {
 })
 ```
 
-![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3-1.png) 
+![](PA1_template_files/figure-html/histogram1-1.png) 
 
        3. Calculate and report the mean and median of the total number of steps taken per day.
 
@@ -112,7 +109,7 @@ with(meanStepsPerInt, {plot(x= Interval, y= AveStepsAcrossDates, type= "l",
 )})
 ```
 
-![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5-1.png) 
+![](PA1_template_files/figure-html/simpleplot1-1.png) 
 
        2. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number 
           of steps?
@@ -194,7 +191,7 @@ with(stepsPerDayImp, {
 })
 ```
 
-![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10-1.png) 
+![](PA1_template_files/figure-html/histogram2-1.png) 
 
 The mean and median steps per day after imputing the data are as follows:
 
@@ -269,7 +266,7 @@ xyplot( type="l", col= "blue", data= meanStepsPerIntDayType, steps ~ interval | 
         ylab= "Number of steps", layout=c(1,2))
 ```
 
-![plot of chunk unnamed-chunk-14](figure/unnamed-chunk-14-1.png) 
+![](PA1_template_files/figure-html/simpleplot2-1.png) 
 
 
 
